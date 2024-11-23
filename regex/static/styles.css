@@ -1,0 +1,164 @@
+/* General Reset and Body Styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #222222; /* Dark background */
+    color: #f0f0f0; /* Light text */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Main Container Styling */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #3a3a3a; /* Darker container */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Typography */
+h2, label {
+    color: #ff8c00; /* Warm orange for header */
+    transition: color 0.5s ease;
+}
+
+/* Input Fields */
+/* Input Fields */
+input[type="text"],
+textarea {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ff8c00; /* Orange border */
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #2a2a2a; /* Dark background for inputs */
+    color: #ffffff; /* White text for inputs */
+    transition: border-color 0.3s ease, background-color 0.5s ease;
+    resize: vertical; /* Allow vertical resize */
+}
+
+/* Increase the height of the textarea */
+textarea {
+    height: 200px; /* Adjust the height as needed */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #ff8c00; /* Keep the focus color orange */
+    outline: none;
+    background-color: #444444; /* Darker background on focus */
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+    background: linear-gradient(45deg, #ff8c00, #ff4500); /* Warm gradient for button */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(45deg, #ff4500, #ff8c00);
+    transform: scale(1.1);
+}
+
+/* Highlighting Matches */
+.highlight {
+    background-color: #00ff7f; /* Light green for highlights */
+    font-weight: bold;
+    color: #000000; /* Black text on highlighted match */
+}
+
+/* Result Box Styling */
+.result-box {
+    background-color: #343434; /* Dark background */
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #ff8c00; /* Orange border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #f0f0f0; /* Light text color */
+}
+
+.result-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-box li {
+    background-color: #505050; /* Slightly lighter dark background */
+    padding: 5px;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+/* Highlighted Box Styling */
+.highlighted-box {
+    background-color: #1f1f1f; /* Darker background */
+    color: #e9ecef; /* Light text for highlighted string */
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    input[type="text"], textarea {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input[type="submit"] {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"], textarea {
+        font-size: 0.8rem;
+    }
+
+    input[type="submit"] {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
