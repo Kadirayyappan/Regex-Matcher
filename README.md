@@ -84,6 +84,4 @@ If you have any questions or need assistance, feel free to reach out to me:
 ⭐️ Show Your Support
 If you like this project, please consider giving it a ⭐️! It helps me a lot and motivates me to continue building cool projects.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
