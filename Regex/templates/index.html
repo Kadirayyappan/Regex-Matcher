@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matcher</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Regex Matcher</h2>
+        <form action="/" method="post">
+            <label for="regex">Regular Expression</label><br>
+            <input type="text" id="regex" name="regex" required><br>
+            
+            <label for="test_string">Test String</label><br>
+            <textarea id="test_string" name="test_string" required></textarea><br>
+    
+            <input type="submit" value="Submit">
+        </form>
+        
+        <!-- Match Results Box -->
+        <div class="result-box">
+            {% if matches %}
+                <h3>Matched Strings: {{ matches|length }}</h3>
+                <ul>
+                    {% for match in matches %}
+                    <li>{{ match }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No matches found.</p>
+            {% endif %}
+        </div>
+
+        <!-- Highlighted Test String -->
+        <div class="highlighted-box">
+            {{ highlighted|safe }}
+        </div>
+        
+        <!-- Email Validation Section -->
+        <div class="email-validation-box">
+            <h3>Email Validation</h3>
+            <form action="/validate_email" method="post">
+                <label for="email">Enter Email Address:</label><br>
+                <input type="text" id="email" name="email" required><br><br>
+                <input type="submit" value="Validate Email">
+            </form>
+
+            {% if email_status %}
+                <div class="email-status">
+                    <h4>{{ email_status }}</h4>
+                </div>
+            {% endif %}
+        </div>
+
+    </div>
+
+</body>
+</html>
